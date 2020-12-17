@@ -1,4 +1,4 @@
-mark_krosss!(r::Robot)
+mark_kross!(r::Robot)
 
 function mark_kross!(r::Robot) # - главная функция  
     for side in (Nord,West,Sud,Ost) # - перебор всех возможных направлений

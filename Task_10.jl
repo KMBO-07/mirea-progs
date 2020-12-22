@@ -17,20 +17,7 @@ function get_sum_temperatures(r::Robot)
 end 
 
 function get_sum_temperatures(r::Robot,side::HorizonSide)
-# список аргументов этой функции отличается от списка аргументов предыдущей функции, поэтому Julia будет  
-# знать, какой именно метод функции get_sum_temperatures должен быть вызван
 
-    #=
-        if ismarkers(r)==false
-            sum_temperatures=0
-            num_markers=0
-        else
-            sum_temperatures=temperature(r)
-            num_markers=0    
-        end
-    =# 
-    
-    #Но вместо предыдущего можно написать короче:
 
     init_values(r) = ismarkers(r) ? (0,0) : (temperanure(r), 1)
     sum_temperatures, num_markers = init_values(r)
